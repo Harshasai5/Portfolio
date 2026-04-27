@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --color-neon-pink: #ff2e9f;
+  --color-neon-green: #00ff9f;
+  --color-dark-bg: #0a0a0a;
+  --color-dark-card: #141414;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: var(--font-poppins);
+  background-color: var(--color-dark-bg);
+  color: #e5e5e5;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor since we have a custom one */
+}
+
+a, button, input, textarea {
+  cursor: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-pink);
+}
+
+/* Glassmorphism Utilities */
+@utility glass {
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility glow-pink {
+  box-shadow: 0 0 15px rgba(255, 46, 159, 0.5);
+}
+
+@utility glow-green {
+  box-shadow: 0 0 15px rgba(0, 255, 159, 0.5);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px currentColor;
+}
