@@ -31,7 +31,7 @@ export const AchievementsActivities = () => {
 
   return (
     <section id="activities" className="py-20 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-neon-purple)]/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-neon-blue)]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -45,7 +45,7 @@ export const AchievementsActivities = () => {
               Achievements & Activities
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-neon-pink)] to-[var(--color-neon-purple)] mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-neon-blue)] to-[var(--color-neon-purple)] mx-auto rounded-full" />
         </motion.div>
 
         {/* 3x3 Grid Representation */}
@@ -58,25 +58,25 @@ export const AchievementsActivities = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               onClick={() => setSelectedItem(item)}
-              className="glass p-6 rounded-xl border border-white/5 hover:border-[var(--color-neon-pink)]/30 transition-all duration-300 group flex flex-col justify-between relative overflow-hidden cursor-pointer h-full min-h-[140px]"
+              className="glass p-6 rounded-xl border border-white/5 hover:border-[var(--color-neon-blue)]/30 transition-all duration-300 group flex flex-col justify-between relative overflow-hidden cursor-pointer h-full min-h-[140px]"
             >
               {/* Hover effect gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-neon-pink)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-neon-blue)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               
               <div className="flex justify-between items-start mb-4 relative z-10">
-                <span className="text-[10px] font-bold px-2.5 py-1 rounded-md bg-[var(--color-neon-pink)]/10 text-[var(--color-neon-pink)] tracking-wider uppercase border border-[var(--color-neon-pink)]/20 shadow-[0_0_10px_rgba(255,46,159,0.1)]">
+                <span className="text-[10px] font-bold px-2.5 py-1 rounded-md bg-[var(--color-neon-blue)]/10 text-[var(--color-neon-blue)] tracking-wider uppercase border border-[var(--color-neon-blue)]/20 shadow-[0_0_10px_rgba(58,134,255,0.1)]">
                   {item.type}
                 </span>
                 
                 <div 
-                  className="text-gray-400 group-hover:text-[var(--color-neon-pink)] transition-colors p-1.5 bg-white/5 rounded-full group-hover:bg-[var(--color-neon-pink)]/20"
+                  className="text-gray-400 group-hover:text-[var(--color-neon-blue)] transition-colors p-1.5 bg-white/5 rounded-full group-hover:bg-[var(--color-neon-blue)]/20"
                   title="Know More"
                 >
                   <Info size={16} />
                 </div>
               </div>
 
-              <h3 className="text-lg font-bold text-white leading-snug group-hover:text-[var(--color-neon-pink)] transition-colors relative z-10 line-clamp-3">
+              <h3 className="text-lg font-bold text-white leading-snug group-hover:text-[var(--color-neon-blue)] transition-colors relative z-10 line-clamp-3">
                 {item.title}
               </h3>
             </motion.div>
@@ -108,9 +108,9 @@ export const AchievementsActivities = () => {
               </div>
               
               <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
-                <Award className="w-5 h-5 text-[var(--color-neon-pink)] shrink-0 mt-0.5" />
+                <Award className="w-5 h-5 text-[var(--color-neon-blue)] shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-[var(--color-neon-pink)] uppercase tracking-wider mb-2">Description & Impact</p>
+                  <p className="text-xs font-semibold text-[var(--color-neon-blue)] uppercase tracking-wider mb-2">Description & Impact</p>
                   <p className="text-sm text-gray-300 leading-relaxed">{selectedItem.projectDetail}</p>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export const AchievementsActivities = () => {
                   href={selectedItem.proofLink} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-xl bg-[var(--color-neon-pink)] text-white font-semibold hover:bg-[var(--color-neon-pink)]/80 transition-all duration-300 shadow-[0_0_15px_rgba(255,46,159,0.3)]"
+                  className="inline-flex items-center px-6 py-3 rounded-xl bg-[var(--color-neon-blue)] text-white font-semibold hover:bg-[var(--color-neon-blue)]/80 transition-all duration-300 shadow-[0_0_15px_rgba(58,134,255,0.3)]"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Proof / Certificate

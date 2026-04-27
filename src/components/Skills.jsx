@@ -22,9 +22,9 @@ export const Skills = () => {
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-roboto mb-4">
-            Technical <span className="text-[var(--color-neon-green)] text-glow">Arsenal</span>
+            Technical <span className="text-[var(--color-neon-purple)] text-glow">Arsenal</span>
           </h2>
-          <div className="h-1 w-20 bg-[var(--color-neon-pink)] rounded-full glow-pink mx-auto" />
+          <div className="h-1 w-20 bg-[var(--color-neon-blue)] rounded-full glow-blue mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -35,12 +35,12 @@ export const Skills = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={containerVariants}
-              className="glass p-8 rounded-3xl border border-white/5 hover:border-[var(--color-neon-green)]/30 transition-colors relative overflow-hidden group"
+              className="glass p-8 rounded-3xl border border-white/5 hover:border-[var(--color-neon-purple)]/30 transition-colors relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-green)] rounded-full blur-[80px] opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-purple)] rounded-full blur-[80px] opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none" />
               
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-white/5 rounded-2xl text-[var(--color-neon-green)]">
+                <div className="p-3 bg-white/5 rounded-2xl text-[var(--color-neon-purple)]">
                   <category.icon size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-white">{category.category}</h3>
@@ -53,13 +53,13 @@ export const Skills = () => {
                   let borderColor = "hover:border-gray-400/50";
                   
                   if (skill.level === "Expert") {
-                    levelColor = "text-[var(--color-neon-green)]";
-                    dotColor = "bg-[var(--color-neon-green)] glow-green";
-                    borderColor = "hover:border-[var(--color-neon-green)]/50";
+                    levelColor = "text-[var(--color-neon-purple)]";
+                    dotColor = "bg-[var(--color-neon-purple)] glow-purple";
+                    borderColor = "hover:border-[var(--color-neon-purple)]/50";
                   } else if (skill.level === "Intermediate") {
-                    levelColor = "text-[var(--color-neon-pink)]";
-                    dotColor = "bg-[var(--color-neon-pink)] glow-pink";
-                    borderColor = "hover:border-[var(--color-neon-pink)]/50";
+                    levelColor = "text-[var(--color-neon-blue)]";
+                    dotColor = "bg-[var(--color-neon-blue)] glow-blue";
+                    borderColor = "hover:border-[var(--color-neon-blue)]/50";
                   }
 
                   return (

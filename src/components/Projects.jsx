@@ -14,9 +14,9 @@ export const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-roboto mb-4">
-            Featured <span className="text-[var(--color-neon-pink)] text-glow">Projects</span>
+            Featured <span className="text-[var(--color-neon-blue)] text-glow">Projects</span>
           </h2>
-          <div className="h-1 w-20 bg-[var(--color-neon-green)] rounded-full glow-green" />
+          <div className="h-1 w-20 bg-[var(--color-neon-purple)] rounded-full glow-purple" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

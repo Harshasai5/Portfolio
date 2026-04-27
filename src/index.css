@@ -4,8 +4,8 @@
 @theme {
   --font-poppins: 'Poppins', sans-serif;
   --font-roboto: 'Roboto', sans-serif;
-  --color-neon-pink: #ff2e9f;
-  --color-neon-green: #00ff9f;
+  --color-neon-purple: #7B2CBF;
+  --color-neon-blue: #3A86FF;
   --color-dark-bg: #0a0a0a;
   --color-dark-card: #141414;
 }
@@ -39,7 +39,7 @@ a, button, input, textarea {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-neon-pink);
+  background: var(--color-neon-blue);
 }
 
 /* Glassmorphism Utilities */
@@ -50,12 +50,12 @@ a, button, input, textarea {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-@utility glow-pink {
-  box-shadow: 0 0 15px rgba(255, 46, 159, 0.5);
+@utility glow-purple {
+  box-shadow: 0 0 15px rgba(123, 44, 191, 0.5);
 }
 
-@utility glow-green {
-  box-shadow: 0 0 15px rgba(0, 255, 159, 0.5);
+@utility glow-blue {
+  box-shadow: 0 0 15px rgba(58, 134, 255, 0.5);
 }
 
 @utility text-glow {

@@ -13,7 +13,7 @@ export const FlagshipProject = () => {
   return (
     <section id="flagship" className="py-16 lg:py-32 relative overflow-hidden">
       {/* Background glowing orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--color-neon-pink)]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--color-neon-blue)]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-16 flex flex-col items-center text-center">
@@ -23,13 +23,13 @@ export const FlagshipProject = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold font-roboto mb-4"
           >
-            Flagship <span className="text-[var(--color-neon-pink)] text-glow">Project</span>
+            Flagship <span className="text-[var(--color-neon-blue)] text-glow">Project</span>
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
             whileInView={{ width: "5rem" }}
             viewport={{ once: true }}
-            className="h-1 bg-[var(--color-neon-green)] rounded-full glow-green" 
+            className="h-1 bg-[var(--color-neon-purple)] rounded-full glow-purple" 
           />
         </div>
 
@@ -50,18 +50,18 @@ export const FlagshipProject = () => {
                 alt={project.title} 
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 border-[var(--color-neon-pink)]/20 border-r lg:border-r-0 lg:border-b z-20 pointer-events-none" />
+              <div className="absolute inset-0 border-[var(--color-neon-blue)]/20 border-r lg:border-r-0 lg:border-b z-20 pointer-events-none" />
             </div>
 
             {/* Content Section */}
             <div className="w-full lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-green)] rounded-full blur-[80px] opacity-10 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-purple)] rounded-full blur-[80px] opacity-10 pointer-events-none" />
               
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 {project.title}
               </h3>
               
-              <p className="text-lg md:text-xl text-[var(--color-neon-pink)] mb-8 font-mono">
+              <p className="text-lg md:text-xl text-[var(--color-neon-blue)] mb-8 font-mono">
                 {project.description}
               </p>
 
@@ -79,13 +79,13 @@ export const FlagshipProject = () => {
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-auto">
                 <Button 
                   variant="ghost" 
-                  className="w-full sm:flex-1 py-4 text-lg border border-white/10 hover:border-[var(--color-neon-pink)]/50 bg-white/5" 
+                  className="w-full sm:flex-1 py-4 text-lg border border-white/10 hover:border-[var(--color-neon-blue)]/50 bg-white/5" 
                   onClick={() => setIsModalOpen(true)}
                 >
                   Know More
                 </Button>
                 <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[140px]">
-                  <Button variant="primary" className="w-full py-4 text-lg shadow-[0_0_20px_var(--color-neon-pink)]/30 hover:shadow-[0_0_30px_var(--color-neon-pink)]/50">
+                  <Button variant="primary" className="w-full py-4 text-lg shadow-[0_0_20px_var(--color-neon-blue)]/30 hover:shadow-[0_0_30px_var(--color-neon-blue)]/50">
                     <ExternalLink size={20} className="mr-2 inline" /> Live Demo
                   </Button>
                 </a>

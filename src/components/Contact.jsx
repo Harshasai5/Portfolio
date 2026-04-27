@@ -78,9 +78,9 @@ export const Contact = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold font-roboto mb-4">
-            Let's <span className="text-[var(--color-neon-pink)] text-glow">Connect</span>
+            Let's <span className="text-[var(--color-neon-blue)] text-glow">Connect</span>
           </h2>
-          <div className="h-1 w-20 bg-[var(--color-neon-green)] rounded-full glow-green mx-auto mb-6" />
+          <div className="h-1 w-20 bg-[var(--color-neon-purple)] rounded-full glow-purple mx-auto mb-6" />
           <p className="text-gray-400 max-w-2xl mx-auto">
             Ready to build something extraordinary? Drop a message or connect with me on social media.
           </p>
@@ -98,19 +98,19 @@ export const Contact = () => {
               viewport={{ once: true }}
               className="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-pink)]/10 rounded-full blur-[50px] group-hover:bg-[var(--color-neon-pink)]/20 transition-colors pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-blue)]/10 rounded-full blur-[50px] group-hover:bg-[var(--color-neon-blue)]/20 transition-colors pointer-events-none" />
               
               <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                <Mail className="text-[var(--color-neon-pink)]" /> Direct Mail
+                <Mail className="text-[var(--color-neon-blue)]" /> Direct Mail
               </h3>
               
-              <div className="flex items-center justify-between p-4 bg-black/40 rounded-xl border border-white/10 group-hover:border-[var(--color-neon-pink)]/30 transition-colors">
+              <div className="flex items-center justify-between p-4 bg-black/40 rounded-xl border border-white/10 group-hover:border-[var(--color-neon-blue)]/30 transition-colors">
                 <span className="text-gray-300 font-mono text-sm truncate pr-4">
                   {PORTFOLIO_DATA.socials.email}
                 </span>
                 <button
                   onClick={handleCopyEmail}
-                  className="p-2 bg-white/10 hover:bg-[var(--color-neon-pink)] text-gray-300 hover:text-white rounded-lg transition-colors flex-shrink-0"
+                  className="p-2 bg-white/10 hover:bg-[var(--color-neon-blue)] text-gray-300 hover:text-white rounded-lg transition-colors flex-shrink-0"
                   title="Copy Email"
                 >
                   {copied ? <CheckCircle size={18} /> : <Copy size={18} />}
@@ -156,7 +156,7 @@ export const Contact = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-neon-green)] focus:ring-1 focus:ring-[var(--color-neon-green)] transition-all font-mono text-sm"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-neon-purple)] focus:ring-1 focus:ring-[var(--color-neon-purple)] transition-all font-mono text-sm"
                     placeholder="John Doe"
                   />
                 </div>
@@ -168,7 +168,7 @@ export const Contact = () => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-neon-green)] focus:ring-1 focus:ring-[var(--color-neon-green)] transition-all font-mono text-sm"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-neon-purple)] focus:ring-1 focus:ring-[var(--color-neon-purple)] transition-all font-mono text-sm"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -181,7 +181,7 @@ export const Contact = () => {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-neon-pink)] focus:ring-1 focus:ring-[var(--color-neon-pink)] transition-all font-mono text-sm resize-none"
+                  className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[var(--color-neon-blue)] focus:ring-1 focus:ring-[var(--color-neon-blue)] transition-all font-mono text-sm h-32 resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -190,7 +190,7 @@ export const Contact = () => {
                 <div className="text-red-400 text-sm mt-2">{errorMessage}</div>
               )}
               {status === "success" && (
-                <div className="text-[var(--color-neon-green)] text-sm mt-2 font-medium">
+                <div className="text-[var(--color-neon-purple)] text-sm mt-2 font-medium">
                   Message sent successfully!
                 </div>
               )}

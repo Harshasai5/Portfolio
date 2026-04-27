@@ -9,13 +9,12 @@ import { Education } from "./components/Education";
 import { Contact } from "./components/Contact";
 import { CustomCursor } from "./components/ui/CustomCursor";
 import { ScrollProgress } from "./components/ui/ScrollProgress";
-import { Chatbot } from "./components/ui/Chatbot";
 import { AchievementsActivities } from "./components/AchievementsActivities";
 import { PORTFOLIO_DATA } from "./data/constants";
 
 function App() {
   return (
-    <div className="relative min-h-screen selection:bg-[var(--color-neon-pink)] selection:text-white">
+    <div className="relative min-h-screen selection:bg-[var(--color-neon-blue)] selection:text-white">
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
@@ -32,7 +31,6 @@ function App() {
         <Contact />
       </main>
 
-      <Chatbot />
 
       {/* Footer */}
       <footer className="py-8 text-center text-gray-500 border-t border-white/5 bg-[var(--color-dark-bg)] relative z-10">

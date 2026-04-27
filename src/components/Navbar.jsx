@@ -19,17 +19,33 @@ export const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const targetId = id.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      setIsMobileMenuOpen(false);
+      const navbarHeight = isScrolled ? 70 : 90;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      // Update active section based on scroll position
       const sections = navLinks.map(link => link.name.toLowerCase());
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
+          if (rect.top <= 120 && rect.bottom >= 120) {
             setActiveSection(section);
             break;
           }
@@ -51,10 +67,14 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold font-roboto tracking-wider text-white flex items-center gap-2">
-          <span className="text-[var(--color-neon-pink)]">&lt;</span>
+        <a 
+          href="#home" 
+          onClick={(e) => scrollToSection(e, "home")}
+          className="text-2xl font-bold font-roboto tracking-wider text-white flex items-center gap-2 relative z-50"
+        >
+          <span className="text-[var(--color-neon-blue)]">&lt;</span>
           Harsha
-          <span className="text-[var(--color-neon-green)]">/&gt;</span>
+          <span className="text-[var(--color-neon-purple)]">/&gt;</span>
         </a>
 
         {/* Desktop Nav */}
@@ -63,12 +83,13 @@ export const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
+              onClick={(e) => scrollToSection(e, link.href)}
               className={`text-sm uppercase tracking-widest font-medium transition-colors relative group ${
-                activeSection === link.name.toLowerCase() ? "text-[var(--color-neon-pink)]" : "text-gray-300 hover:text-white"
+                activeSection === link.name.toLowerCase() ? "text-[var(--color-neon-blue)]" : "text-gray-300 hover:text-white"
               }`}
             >
               {link.name}
-              <span className={`absolute -bottom-1 left-0 h-[2px] bg-[var(--color-neon-pink)] transition-all duration-300 ${
+              <span className={`absolute -bottom-1 left-0 h-[2px] bg-[var(--color-neon-blue)] transition-all duration-300 ${
                 activeSection === link.name.toLowerCase() ? "w-full" : "w-0 group-hover:w-full"
               }`} />
             </a>
@@ -77,7 +98,7 @@ export const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white relative z-50"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -88,17 +109,19 @@ export const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "100vh" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="fixed inset-0 glass z-30 flex flex-col items-center justify-center gap-8 md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 glass z-30 flex flex-col items-center justify-center gap-8 md:hidden h-screen w-screen"
           >
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-2xl uppercase tracking-widest text-white hover:text-[var(--color-neon-pink)] transition-colors"
+                onClick={(e) => scrollToSection(e, link.href)}
+                className={`text-2xl uppercase tracking-widest transition-colors ${
+                  activeSection === link.name.toLowerCase() ? "text-[var(--color-neon-blue)]" : "text-white hover:text-[var(--color-neon-blue)]"
+                }`}
               >
                 {link.name}
               </a>

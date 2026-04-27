@@ -19,8 +19,8 @@ export const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Abstract Background */}
       <div className="absolute inset-0 z-0 opacity-30">
-        <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-[var(--color-neon-pink)] rounded-full blur-[120px] mix-blend-screen animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-[var(--color-neon-green)] rounded-full blur-[150px] mix-blend-screen animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
+        <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-[var(--color-neon-blue)] rounded-full blur-[120px] mix-blend-screen animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-[var(--color-neon-purple)] rounded-full blur-[150px] mix-blend-screen animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
@@ -32,7 +32,7 @@ export const Hero = () => {
         >
           <span className="text-gray-400 font-mono tracking-widest uppercase text-sm mb-4 block">Welcome to my universe</span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black font-roboto mb-6 tracking-tight">
-            I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-neon-pink)] to-[var(--color-neon-green)]">{name}</span>
+            I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-neon-blue)] to-[var(--color-neon-purple)]">{name}</span>
           </h1>
         </motion.div>
 
@@ -49,7 +49,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="font-semibold text-[var(--color-neon-green)] inline-block min-w-[200px] text-left"
+              className="font-semibold text-[var(--color-neon-purple)] inline-block min-w-[200px] text-left"
             >
               {roles[currentRole]}
             </motion.span>
@@ -84,7 +84,7 @@ export const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="mt-20 flex flex-col items-center gap-2 text-gray-500 hover:text-[var(--color-neon-pink)] transition-colors cursor-pointer"
+          className="mt-20 flex flex-col items-center gap-2 text-gray-500 hover:text-[var(--color-neon-blue)] transition-colors cursor-pointer"
           onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <span className="text-xs uppercase tracking-widest">Scroll</span>

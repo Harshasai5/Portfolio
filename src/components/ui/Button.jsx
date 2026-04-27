@@ -5,8 +5,8 @@ export const Button = ({ children, className, variant = "primary", ...props }) =
   const baseStyles = "relative inline-flex items-center justify-center px-8 py-3 font-medium tracking-wide transition-all duration-300 rounded-full overflow-hidden group";
   
   const variants = {
-    primary: "bg-[var(--color-neon-pink)] text-white hover:bg-[#d62083] glow-pink",
-    secondary: "bg-transparent text-white border border-[var(--color-neon-green)] hover:bg-[rgba(0,255,159,0.1)] glow-green",
+    primary: "bg-[var(--color-neon-blue)] text-white hover:bg-[#2A66D6] glow-blue",
+    secondary: "bg-transparent text-white border border-[var(--color-neon-purple)] hover:bg-[rgba(123,44,191,0.1)] glow-purple",
     ghost: "bg-transparent text-gray-300 hover:text-white hover:bg-[rgba(255,255,255,0.05)]",
   };
 
